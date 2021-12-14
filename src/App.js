@@ -14,7 +14,7 @@ export default function App() {
 
             {/* ========================================================================================================= */}
 
-            <main className="movie-selection-page ">
+            <main className="movie-selection-page hidden">
                 <div className="title-page">
                     <span className="title">Selecione o filme</span>
                 </div>
@@ -92,7 +92,7 @@ export default function App() {
 
             {/* ========================================================================================================= */}
 
-            <main className="seat-selection-page hidden">
+            <main className="seat-selection-page ">
                 <div className="title-page">
                     <span className="title">Selecione o(s) assento(s)</span>
                 </div>
