@@ -1,7 +1,32 @@
-import image1 from "../assets/image 3.png";
-import image2 from "../assets/image 6.png";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+
+import loading from "../assets/loading.svg";
 
 export default function SectionSelection() {
+    const [filme, setFilme] = useState([]);
+    const { idMovie } = useParams();
+
+    let { days } = filme;
+
+    useEffect(() => {
+        const promise = axios.get(`https://mock-api.driven.com.br/api/v4/cineflex/movies/${idMovie}/showtimes`);
+
+        promise.then(response => {
+            setFilme(response.data);
+        });
+    }, []);
+
+    if (filme.length === 0) {
+        return (
+            <>
+                <img src={loading} />
+                <h1>Carregando...</h1>
+            </>
+        );
+    }
+
     return (
         <main className="time-selection-page">
             <div className="title-page">
@@ -9,31 +34,28 @@ export default function SectionSelection() {
             </div>
             <div className="content">
                 <div className="container">
-                    <span className="date">
-                        Quinta-Feira - 24/06/2021
-                    </span>
-                    <div className="hours">
-                        <span className="hours-box">15:00</span>
-                        <span className="hours-box">19:00</span>
-                    </div>
-                </div>
-                <div className="container">
-                    <span className="date">
-                        Sexta-Feira - 25/06/2021
-                    </span>
-                    <div className="hours">
-                        <span className="hours-box">15:00</span>
-                        <span className="hours-box">19:00</span>
-                    </div>
+                    {days.map((filme) => (
+                        <div className="date">
+                            <h1>{filme.weekday} - {filme.date}</h1>
+
+                            <div className="hours">
+                                {filme.showtimes.map(section =>
+                                    <Link to={`/seats/${section.id}`}>
+                                        <span className="hours-box">{section.name}</span>
+                                    </Link>
+                                )}
+                            </div>
+                        </div>
+                    ))}
                 </div>
             </div>
             <div className="choosenMovie">
                 <div className="container">
-                    <img src={image2} alt="cartaz-2" />
+                    <img src={filme.posterURL} alt="cartaz-2" />
                 </div>
                 <div className="choosenMovieData">
                     <span className="choosenMovieName">
-                        Enola Holmes
+                        {filme.title}
                     </span>
                 </div>
             </div>

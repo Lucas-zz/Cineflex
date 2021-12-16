@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function ReceiptPage() {
     return (
         <main className="receipt-page">
@@ -39,10 +41,11 @@ export default function ReceiptPage() {
                     </div>
                 </div>
             </div>
-
-            <div className="home-button">
-                <button>Voltar para Home</button>
-            </div>
+            <Link to="/">
+                <div className="home-button">
+                    <button>Voltar para Home</button>
+                </div>
+            </Link>
 
         </main>
     );

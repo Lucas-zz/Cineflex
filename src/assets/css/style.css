@@ -105,6 +105,9 @@ body {
 }
 
 .time-selection-page .content {
+    width: auto;
+    height: auto;
+    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -120,13 +123,14 @@ body {
 
 .time-selection-page .content .container .date{
     display: flex;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
     
     font-weight: 300;
     font-size: 20px;
     line-height: 23px;
     letter-spacing: 0.02em;
-
+    
     color: #293845;
 }
 
@@ -134,10 +138,11 @@ body {
     display: flex;
     justify-content: flex-start;
     flex-wrap: wrap;
-
+    
     gap: 8px;
 
-    margin-top: 25px;
+    margin-top: 10px;
+    margin-bottom: 25px;
 }
 
 .time-selection-page .content .container .hours .hours-box {
@@ -161,7 +166,7 @@ body {
 }
 
 .choosenMovie {
-    width: 375px;
+    width: 100%;
     height: 117px;
 
     display: flex;
@@ -204,6 +209,8 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+
+    text-align: left;
 
     font-weight: 300;
     font-size: 26px;

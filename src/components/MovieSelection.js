@@ -1,26 +1,19 @@
-
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 import loading from "../assets/loading.svg";
-import image1 from "../assets/image 3.png";
-import image2 from "../assets/image 6.png";
 
 export default function MovieSelection() {
     const [filmes, setFilmes] = useState([]);
 
     useEffect(() => {
+        const promise = axios.get("https://mock-api.driven.com.br/api/v4/cineflex/movies");
 
-        const promisse = axios.get("https://mock-api.driven.com.br/api/v4/cineflex/movies");
-
-        promisse.then(response => {
+        promise.then(response => {
             setFilmes(response.data);
         });
-
     }, [])
-
-    console.log(filmes);
-    console.log(typeof (filmes));
 
     if (filmes.length === 0) {
         return (
@@ -38,9 +31,11 @@ export default function MovieSelection() {
             </div>
             <div className="content">
                 {filmes.map(filme => (
-                    <div className="container">
-                        <img src={filme.posterURL} alt={filme.title} />
-                    </div>
+                    <Link to={`/sections/${filme.id}`}>
+                        <div className="container">
+                            <img src={filme.posterURL} alt={filme.title} />
+                        </div>
+                    </Link>
                 ))}
             </div>
         </main>
