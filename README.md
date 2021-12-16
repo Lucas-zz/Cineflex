@@ -2,8 +2,6 @@
 
 Projeto feito com JavaScript/React/React Router, HTML, CSS e uma API disponibilizada pela Driven Education!
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Sobre
 
 Single-Page Application feita para um cinema, usando React Router!
