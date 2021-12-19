@@ -99,15 +99,14 @@ body {
 }
 
 .time-selection-page {
+    width: 100%;
     height: 100vh;
 
+    margin: auto;
     padding-top: 67px;
 }
 
-.time-selection-page .content {
-    width: auto;
-    height: auto;
-    
+.time-selection-page .content {    
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -180,6 +179,7 @@ body {
     background-color: #dfe6ed;
 
     position: fixed;
+    left: 0;
     bottom: 0;
     z-index: 2;
 }
@@ -220,9 +220,14 @@ body {
 }
 
 .seat-selection-page {
+    width: 375px;
     height: 100vh;
 
+    margin: auto;
+
     padding-top: 67px;
+
+    position: relative;
 }
 
 .seat-selection-page .seats {
@@ -381,6 +386,8 @@ body {
 
 .receipt-page {
     width: 375px;
+    
+    margin: auto;
     padding-top: 67px;
 }
 
