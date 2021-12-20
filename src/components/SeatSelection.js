@@ -79,7 +79,7 @@ export default function SeatSelection({ confirmSend }) {
 
     function confirmation() {
         confirmSend(reserveSeats, idSection, '');
-        //axios.post(`https://mock-api.driven.com.br/api/v4/cineflex/seats/book-many`, reserveSeats);
+        axios.post(`https://mock-api.driven.com.br/api/v4/cineflex/seats/book-many`, reserveSeats);
     }
 
     const isFilled = reserveSeats.ids.length !== 0 && nome.length !== 0 && !(cpf.length != 11);
@@ -151,7 +151,6 @@ export default function SeatSelection({ confirmSend }) {
                 weekday={day.weekday}
                 time={name}
             />
-
         </main>
     );
 }
