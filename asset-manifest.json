@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Projeto_09_Cineflex_React/static/css/main.5ba9e439.chunk.css",
+    "main.js": "/Projeto_09_Cineflex_React/static/js/main.e20295af.chunk.js",
+    "main.js.map": "/Projeto_09_Cineflex_React/static/js/main.e20295af.chunk.js.map",
+    "runtime-main.js": "/Projeto_09_Cineflex_React/static/js/runtime-main.81ed1c48.js",
+    "runtime-main.js.map": "/Projeto_09_Cineflex_React/static/js/runtime-main.81ed1c48.js.map",
+    "static/js/2.be1725a4.chunk.js": "/Projeto_09_Cineflex_React/static/js/2.be1725a4.chunk.js",
+    "static/js/2.be1725a4.chunk.js.map": "/Projeto_09_Cineflex_React/static/js/2.be1725a4.chunk.js.map",
+    "index.html": "/Projeto_09_Cineflex_React/index.html",
+    "static/css/main.5ba9e439.chunk.css.map": "/Projeto_09_Cineflex_React/static/css/main.5ba9e439.chunk.css.map",
+    "static/js/2.be1725a4.chunk.js.LICENSE.txt": "/Projeto_09_Cineflex_React/static/js/2.be1725a4.chunk.js.LICENSE.txt",
+    "static/media/back-arrow.f02d7d5f.svg": "/Projeto_09_Cineflex_React/static/media/back-arrow.f02d7d5f.svg",
+    "static/media/loading.f4af70e5.svg": "/Projeto_09_Cineflex_React/static/media/loading.f4af70e5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.81ed1c48.js",
+    "static/js/2.be1725a4.chunk.js",
+    "static/css/main.5ba9e439.chunk.css",
+    "static/js/main.e20295af.chunk.js"
+  ]
+}
