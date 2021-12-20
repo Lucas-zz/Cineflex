@@ -19,10 +19,10 @@ export default function App() {
         <BrowserRouter>
             <Header />
             <Routes>
-                <Route path="/" element={<MovieSelection />}></Route>
-                <Route path="/sections/:idMovie" element={<SectionSelection />}></Route>
-                <Route path="/seats/:idSection" element={<SeatSelection confirmSend={updateMovieDetails} />}></Route>
-                <Route path="/receipt" element={<ReceiptPage confirmSend={movieDetails} />}></Route>
+                <Route path="/Projeto_09_Cineflex_React/" element={<MovieSelection />}></Route>
+                <Route path="/Projeto_09_Cineflex_React/sections/:idMovie" element={<SectionSelection />}></Route>
+                <Route path="/Projeto_09_Cineflex_React/seats/:idSection" element={<SeatSelection confirmSend={updateMovieDetails} />}></Route>
+                <Route path="/Projeto_09_Cineflex_React/receipt" element={<ReceiptPage confirmSend={movieDetails} />}></Route>
             </Routes>
         </BrowserRouter>
     )
