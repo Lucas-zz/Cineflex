@@ -10,4 +10,4 @@ Nessa aplicação é possível escolher um filme a partir de uma lista retirada 
 
 ## Deploy
 
-https://lucas-zz-cineflex.vercel.app/
+Mobile: https://lucas-zz-cineflex.vercel.app/
