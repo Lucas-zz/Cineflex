@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
 
-import loading from "../../assets/loading.svg";
+import loading from "../../assets/img/loading.svg";
 
 
 export default function SeatSelection({ confirmSend }) {

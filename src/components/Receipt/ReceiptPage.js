@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import loading from "../../assets/loading.svg";
+import loading from "../../assets/img/loading.svg";
 
 export default function ReceiptPage({ confirmSend }) {
 

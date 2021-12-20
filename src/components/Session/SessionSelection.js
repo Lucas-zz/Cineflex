@@ -3,7 +3,7 @@ import Footer from "../Utils/Footer";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import loading from "../../assets/loading.svg";
+import loading from "../../assets/img/loading.svg";
 
 export default function SessionSelection() {
     const [movie, setMovie] = useState([]);
