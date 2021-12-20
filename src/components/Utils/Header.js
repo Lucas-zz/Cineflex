@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import backArrow from "../assets/back-arrow.svg";
+import backArrow from "../../assets/back-arrow.svg";
 
 export default function Header() {
     const navigate = useNavigate();

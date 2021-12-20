@@ -2,21 +2,21 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import loading from "../assets/loading.svg";
+import loading from "../../assets/loading.svg";
 
 export default function ReceiptPage({ confirmSend }) {
 
-    const [movieSection, setMovieSection] = useState();
+    const [movieSession, setMovieSession] = useState();
 
     useEffect(() => {
-        const promise = axios.get(`https://mock-api.driven.com.br/api/v4/cineflex/showtimes/${confirmSend.sectionId}/seats`);
+        const promise = axios.get(`https://mock-api.driven.com.br/api/v4/cineflex/showtimes/${confirmSend.sessionId}/seats`);
 
         promise.then(response => {
-            setMovieSection(response.data);
+            setMovieSession(response.data);
         });
-    }, [confirmSend.sectionID]);
+    }, [confirmSend.sessionId]);
 
-    if (movieSection === undefined) {
+    if (movieSession === undefined) {
         return (
             <div className="loading">
                 <img src={loading} />
@@ -38,10 +38,10 @@ export default function ReceiptPage({ confirmSend }) {
                         Filme e sessão
                     </div>
                     <div className="data">
-                        {movieSection.movie.title}
+                        {movieSession.movie.title}
                     </div>
                     <div className="data">
-                        {movieSection.day.date} {movieSection.name}
+                        {movieSession.day.date} {movieSession.name}
                     </div>
                 </div>
                 <div className="tickets">

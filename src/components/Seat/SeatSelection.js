@@ -1,32 +1,32 @@
 import axios from "axios";
-import Footer from "./Footer";
+import Footer from "../Utils/Footer";
 import Seat from "./Seat";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
-
-import loading from "../assets/loading.svg";
 import styled from "styled-components";
+
+import loading from "../../assets/loading.svg";
 
 
 export default function SeatSelection({ confirmSend }) {
 
-    const { idSection } = useParams();
-    const [sectionDetails, setSectionDetails] = useState();
+    const { idSession } = useParams();
+    const [sessionDetails, setSessionDetails] = useState();
     const [reserveSeats, setReserveSeats] = useState({ ids: [] });
 
     const [nome, setNome] = useState("");
     const [cpf, setCpf] = useState("");
 
     useEffect(() => {
-        const promise = axios.get(`https://mock-api.driven.com.br/api/v4/cineflex/showtimes/${idSection}/seats`);
+        const promise = axios.get(`https://mock-api.driven.com.br/api/v4/cineflex/showtimes/${idSession}/seats`);
 
         promise.then(response => {
-            setSectionDetails(response.data);
+            setSessionDetails(response.data);
         })
-    }, [idSection]);
+    }, [idSession]);
 
 
-    if (sectionDetails === undefined) {
+    if (sessionDetails === undefined) {
         return (
             <div className="loading">
                 <img src={loading} />
@@ -35,7 +35,7 @@ export default function SeatSelection({ confirmSend }) {
         );
     }
 
-    const { movie, day, name } = sectionDetails;
+    const { movie, day, name } = sessionDetails;
 
     function handleSeat(idSeat, addArray) {
         if (addArray) {
@@ -78,7 +78,7 @@ export default function SeatSelection({ confirmSend }) {
     }
 
     function confirmation() {
-        confirmSend(reserveSeats, idSection, '');
+        confirmSend(reserveSeats, idSession, '');
         axios.post(`https://mock-api.driven.com.br/api/v4/cineflex/seats/book-many`, reserveSeats);
     }
 
@@ -91,7 +91,7 @@ export default function SeatSelection({ confirmSend }) {
             </div>
             <div className="seats">
                 <div className="seats-to-choose">
-                    {sectionDetails.seats.map(seat => (
+                    {sessionDetails.seats.map(seat => (
                         (seat.isAvailable === true
                             ? <Seat classSeat="circle available" name={seat.name} id={seat.id} handle={handleSeat} />
                             : <Seat classSeat="circle unavailable" name={seat.name} />

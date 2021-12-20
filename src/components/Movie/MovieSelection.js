@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-import loading from "../assets/loading.svg";
+import loading from "../../assets/loading.svg";
 
 export default function MovieSelection() {
     const [movies, setMovies] = useState([]);
@@ -31,7 +31,7 @@ export default function MovieSelection() {
             </div>
             <div className="content">
                 {movies.map(movie => (
-                    <Link to={`/sections/${movie.id}`}>
+                    <Link to={`/sessions/${movie.id}`}>
                         <div className="container">
                             <img src={movie.posterURL} alt={movie.title} />
                         </div>

@@ -1,11 +1,11 @@
 import axios from "axios";
-import Footer from "./Footer";
+import Footer from "../Utils/Footer";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import loading from "../assets/loading.svg";
+import loading from "../../assets/loading.svg";
 
-export default function SectionSelection() {
+export default function SessionSelection() {
     const [movie, setMovie] = useState([]);
     const { idMovie } = useParams();
 
@@ -35,14 +35,14 @@ export default function SectionSelection() {
             </div>
             <div className="content">
                 <div className="container">
-                    {days.map(section => (
+                    {days.map(session => (
                         <div className="date">
-                            <h1>{section.weekday} - {section.date}</h1>
+                            <h1>{session.weekday} - {session.date}</h1>
 
                             <div className="hours">
-                                {section.showtimes.map(section =>
-                                    <Link to={`/seats/${section.id}`}>
-                                        <span className="hours-box">{section.name}</span>
+                                {session.showtimes.map(session =>
+                                    <Link to={`/seats/${session.id}`}>
+                                        <span className="hours-box">{session.name}</span>
                                     </Link>
                                 )}
                             </div>

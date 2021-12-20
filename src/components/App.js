@@ -1,18 +1,18 @@
 import { useState } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-import Header from './Header';
-import MovieSelection from './MovieSelection';
-import ReceiptPage from './ReceiptPage';
-import SeatSelection from './SeatSelection';
-import SectionSelection from './SectionSelection';
+import Header from './Utils/Header';
+import MovieSelection from './Movie/MovieSelection';
+import ReceiptPage from './Receipt/ReceiptPage';
+import SeatSelection from './Seat/SeatSelection';
+import SessionSelection from './Session/SessionSelection';
 
 export default function App() {
 
     const [movieDetails, setMovieDetails] = useState({});
 
-    function updateMovieDetails(currentDetails, sectionId, details) {
-        setMovieDetails(details = { ...currentDetails, sectionId });
+    function updateMovieDetails(currentDetails, sessionId, details) {
+        setMovieDetails(details = { ...currentDetails, sessionId: sessionId });
     }
 
     return (
@@ -20,8 +20,8 @@ export default function App() {
             <Header />
             <Routes>
                 <Route path="/" element={<MovieSelection />}></Route>
-                <Route path="/sections/:idMovie" element={<SectionSelection />}></Route>
-                <Route path="/seats/:idSection" element={<SeatSelection confirmSend={updateMovieDetails} />}></Route>
+                <Route path="/sessions/:idMovie" element={<SessionSelection />}></Route>
+                <Route path="/seats/:idSession" element={<SeatSelection confirmSend={updateMovieDetails} />}></Route>
                 <Route path="/receipt" element={<ReceiptPage confirmSend={movieDetails} />}></Route>
             </Routes>
         </BrowserRouter>
