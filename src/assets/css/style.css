@@ -432,6 +432,8 @@ body {
     background-color: #e8833a;
 
     cursor: pointer;
+
+    margin-bottom: 150px;
 }
 
 .loading {
