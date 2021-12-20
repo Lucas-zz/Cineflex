@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export default function ReceiptPage({ title, username, cpf, day, time }) {
+export default function ReceiptPage({ title, username, cpf, date, time }) {
 
     cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
 
@@ -20,7 +20,7 @@ export default function ReceiptPage({ title, username, cpf, day, time }) {
                         {title}
                     </div>
                     <div className="data">
-                        {day} {time}
+                        {date} {time}
                     </div>
                 </div>
                 <div className="tickets">

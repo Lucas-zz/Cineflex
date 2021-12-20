@@ -81,14 +81,14 @@ export default function SeatSelection({ filme, setFilme, username, setUsername, 
             </Link>
 
             {setTitle(movie.title)}
-            {setDate(day.weekday)}
+            {setDate(day.date)}
             {setTime(name)}
 
             <Footer
                 src={movie.posterURL}
                 alt={movie.title}
                 title={movie.title}
-                weekday={date}
+                weekday={day.weekday}
                 time={time}
             />
 
