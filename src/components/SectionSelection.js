@@ -21,10 +21,10 @@ export default function SectionSelection() {
 
     if (movie.length === 0) {
         return (
-            <>
+            <div className="loading">
                 <img src={loading} />
                 <h1>Carregando...</h1>
-            </>
+            </div>
         );
     }
 

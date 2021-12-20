@@ -28,10 +28,10 @@ export default function SeatSelection({ confirmSend }) {
 
     if (sectionDetails === undefined) {
         return (
-            <>
+            <div className="loading">
                 <img src={loading} />
                 <h1>Carregando...</h1>
-            </>
+            </div>
         );
     }
 

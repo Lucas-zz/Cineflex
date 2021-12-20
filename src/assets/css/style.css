@@ -40,7 +40,7 @@ body {
 .header > img {
     width: 30px;
     height: 30px;
-    
+
     background-color: #e8833a;
 
     border-radius: 50px;
@@ -433,7 +433,6 @@ body {
     cursor: pointer;
 }
 
-
-.hidden {
-    display: none;
+.loading {
+    padding-top: 50%;
 }

@@ -18,10 +18,10 @@ export default function ReceiptPage({ confirmSend }) {
 
     if (movieSection === undefined) {
         return (
-            <>
+            <div className="loading">
                 <img src={loading} />
                 <h1>Carregando...</h1>
-            </>
+            </div>
         );
     }
 
