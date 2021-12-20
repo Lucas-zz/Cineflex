@@ -17,7 +17,7 @@ export default function SectionSelection() {
         promise.then(response => {
             setMovie(response.data);
         });
-    }, []);
+    }, [idMovie]);
 
     if (movie.length === 0) {
         return (
@@ -35,12 +35,12 @@ export default function SectionSelection() {
             </div>
             <div className="content">
                 <div className="container">
-                    {days.map(filme => (
+                    {days.map(section => (
                         <div className="date">
-                            <h1>{filme.weekday} - {filme.date}</h1>
+                            <h1>{section.weekday} - {section.date}</h1>
 
                             <div className="hours">
-                                {filme.showtimes.map(section =>
+                                {section.showtimes.map(section =>
                                     <Link to={`/seats/${section.id}`}>
                                         <span className="hours-box">{section.name}</span>
                                     </Link>

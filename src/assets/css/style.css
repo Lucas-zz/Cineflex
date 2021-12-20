@@ -15,11 +15,7 @@ body {
     background-color: #fff;
 }
 
-.root > img {
-    padding-top: 50%;
-}
-
-.header {
+.header p{
     width: 100%;
     height: 67px;
 
@@ -39,6 +35,20 @@ body {
     position: fixed;
     top: 0;
     z-index: 2;
+}
+
+.header > img {
+    width: 30px;
+    height: 30px;
+    
+    background-color: #e8833a;
+
+    border-radius: 50px;
+    
+    position: fixed;
+    right: 12px;
+    top: 18px;
+    z-index: 3;
 }
 
 .movie-selection-page {
@@ -356,32 +366,6 @@ body {
     font-size: 15px;
     line-height: 21px;
     color: #afafaf;
-}
-
-.seat-selection-page .reservation-button {
-    width: 100%;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    padding-top: 35px;
-}
-
-.seat-selection-page .reservation-button button {
-    width: 225px;
-    height: 42px;
-
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 21px;
-    letter-spacing: 0.04em;
-    color: #fff;
-
-    border-radius: 3px;
-    background-color: #e8833a;
-
-    cursor: pointer;
 }
 
 .receipt-page {

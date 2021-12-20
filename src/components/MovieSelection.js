@@ -5,17 +5,17 @@ import { Link } from "react-router-dom";
 import loading from "../assets/loading.svg";
 
 export default function MovieSelection() {
-    const [filmes, setFilmes] = useState([]);
+    const [movies, setMovies] = useState([]);
 
     useEffect(() => {
         const promise = axios.get("https://mock-api.driven.com.br/api/v4/cineflex/movies");
 
         promise.then(response => {
-            setFilmes(response.data);
+            setMovies(response.data);
         });
     }, [])
 
-    if (filmes.length === 0) {
+    if (movies.length === 0) {
         return (
             <>
                 <img src={loading} />
@@ -30,10 +30,10 @@ export default function MovieSelection() {
                 <span className="title">Selecione o filme</span>
             </div>
             <div className="content">
-                {filmes.map(filme => (
-                    <Link to={`/sections/${filme.id}`}>
+                {movies.map(movie => (
+                    <Link to={`/sections/${movie.id}`}>
                         <div className="container">
-                            <img src={filme.posterURL} alt={filme.title} />
+                            <img src={movie.posterURL} alt={movie.title} />
                         </div>
                     </Link>
                 ))}

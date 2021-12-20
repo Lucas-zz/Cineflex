@@ -1,10 +1,31 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function ReceiptPage({ title, username, cpf, date, time }) {
+import loading from "../assets/loading.svg";
 
-    cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+export default function ReceiptPage({ confirmSend }) {
 
-    const seats = [1, 2, 3, 4];
+    const [movieSection, setMovieSection] = useState();
+
+    useEffect(() => {
+        const promise = axios.get(`https://mock-api.driven.com.br/api/v4/cineflex/showtimes/${confirmSend.sectionId}/seats`);
+
+        promise.then(response => {
+            setMovieSection(response.data);
+        });
+    }, [confirmSend.sectionID]);
+
+    if (movieSection === undefined) {
+        return (
+            <>
+                <img src={loading} />
+                <h1>Carregando...</h1>
+            </>
+        );
+    }
+
+    confirmSend.cpf = confirmSend.cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
 
     return (
         <main className="receipt-page">
@@ -17,19 +38,19 @@ export default function ReceiptPage({ title, username, cpf, date, time }) {
                         Filme e sessão
                     </div>
                     <div className="data">
-                        {title}
+                        {movieSection.movie.title}
                     </div>
                     <div className="data">
-                        {date} {time}
+                        {movieSection.day.date} {movieSection.name}
                     </div>
                 </div>
                 <div className="tickets">
                     <div className="title">
                         Ingressos
                     </div>
-                    {seats.map(seat => (
+                    {confirmSend.ids.map(seat => (
                         <div className="data">
-                            Assento {seat}
+                            Assento {seat % 50 === 0 ? "50" : seat % 50}
                         </div>
                     ))}
                 </div>
@@ -38,10 +59,10 @@ export default function ReceiptPage({ title, username, cpf, date, time }) {
                         Comprador
                     </div>
                     <div className="data">
-                        Nome: {username}
+                        Nome: {confirmSend.name}
                     </div>
                     <div className="data">
-                        CPF: {cpf}
+                        CPF: {confirmSend.cpf}
                     </div>
                 </div>
             </div>
