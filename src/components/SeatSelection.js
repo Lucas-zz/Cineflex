@@ -5,7 +5,7 @@ import { Link, useParams } from "react-router-dom";
 
 import loading from "../assets/loading.svg";
 
-export default function SeatSelection({ filme, setFilme, username, setUsername, setTitle, cpf, setCpf, date, setDate, time, setTime }) {
+export default function SeatSelection({ filme, setFilme, username, setUsername, setTitle, cpf, setCpf, setDate, time, setTime }) {
 
     const { idSection } = useParams();
     const { movie, day, name } = filme;

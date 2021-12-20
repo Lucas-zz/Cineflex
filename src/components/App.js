@@ -23,7 +23,7 @@ export default function App() {
                 <Route path="/" element={<MovieSelection />}></Route>
                 <Route path="/sections/:idMovie" element={<SectionSelection />}></Route>
                 <Route path="/seats/:idSection" element={<SeatSelection filme={filme} setFilme={setFilme} setTitle={setTitle} username={username} setUsername={setUsername} cpf={cpf} setCpf={setCpf} date={date} setDate={setDate} time={time} setTime={setTime} />}></Route>
-                <Route path="/receipt" element={<ReceiptPage title={title} username={username} cpf={cpf} date={date} time={time} />}></Route>
+                <Route path="/receipt" element={<ReceiptPage title={title} username={username} cpf={cpf} time={time} />}></Route>
             </Routes>
         </BrowserRouter>
     )
