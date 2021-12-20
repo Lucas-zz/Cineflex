@@ -52,7 +52,7 @@ body {
 }
 
 .movie-selection-page {
-    width: 375px;
+    max-width: 375px;
     height: 100%;
 
     margin: auto;
@@ -79,7 +79,6 @@ body {
 }
 
 .movie-selection-page .content {
-
     display: grid;
     grid-template-columns: auto auto;
     justify-content: space-between;
@@ -114,6 +113,7 @@ body {
 
     margin: auto;
     padding-top: 67px;
+    padding-bottom: 117px;
 }
 
 .time-selection-page .content {    
@@ -230,12 +230,13 @@ body {
 }
 
 .seat-selection-page {
-    width: 375px;
+    max-width: 375px;
     height: 100vh;
 
     margin: auto;
 
     padding-top: 67px;
+    padding-bottom: 117px;
 
     position: relative;
 }
@@ -369,7 +370,7 @@ body {
 }
 
 .receipt-page {
-    width: 375px;
+    max-width: 375px;
     
     margin: auto;
     padding-top: 67px;

@@ -170,6 +170,7 @@ const Button = styled.button`
 
     margin: auto;
     margin-top: 35px;
+    margin-bottom: 200px;
 
     cursor: ${({ isFilled }) => isFilled ? 'pointer' : 'not-allowed'};
     opacity: ${({ isFilled }) => isFilled ? '1' : '0.6'};
