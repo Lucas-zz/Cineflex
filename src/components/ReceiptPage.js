@@ -1,6 +1,11 @@
 import { Link } from "react-router-dom";
 
-export default function ReceiptPage() {
+export default function ReceiptPage({ title, username, cpf, day, time }) {
+
+    cpf = cpf.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, "$1.$2.$3-$4");
+
+    const seats = [1, 2, 3, 4];
+
     return (
         <main className="receipt-page">
             <div className="title-page">
@@ -12,32 +17,31 @@ export default function ReceiptPage() {
                         Filme e sessão
                     </div>
                     <div className="data">
-                        Enola Holmes
+                        {title}
                     </div>
                     <div className="data">
-                        24/06/2021 15:00
+                        {day} {time}
                     </div>
                 </div>
                 <div className="tickets">
                     <div className="title">
                         Ingressos
                     </div>
-                    <div className="data">
-                        Assento 15
-                    </div>
-                    <div className="data">
-                        Assento 16
-                    </div>
+                    {seats.map(seat => (
+                        <div className="data">
+                            Assento {seat}
+                        </div>
+                    ))}
                 </div>
                 <div className="buyer">
                     <div className="title">
                         Comprador
                     </div>
                     <div className="data">
-                        Nome: João da Silva Sauro
+                        Nome: {username}
                     </div>
                     <div className="data">
-                        CPF: 123.456.789-10
+                        CPF: {cpf}
                     </div>
                 </div>
             </div>

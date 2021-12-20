@@ -1,24 +1,25 @@
 import axios from "axios";
+import Footer from "./Footer";
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
 import loading from "../assets/loading.svg";
 
 export default function SectionSelection() {
-    const [filme, setFilme] = useState([]);
+    const [movie, setMovie] = useState([]);
     const { idMovie } = useParams();
 
-    let { days } = filme;
+    let { days } = movie;
 
     useEffect(() => {
         const promise = axios.get(`https://mock-api.driven.com.br/api/v4/cineflex/movies/${idMovie}/showtimes`);
 
         promise.then(response => {
-            setFilme(response.data);
+            setMovie(response.data);
         });
     }, []);
 
-    if (filme.length === 0) {
+    if (movie.length === 0) {
         return (
             <>
                 <img src={loading} />
@@ -34,7 +35,7 @@ export default function SectionSelection() {
             </div>
             <div className="content">
                 <div className="container">
-                    {days.map((filme) => (
+                    {days.map(filme => (
                         <div className="date">
                             <h1>{filme.weekday} - {filme.date}</h1>
 
@@ -49,16 +50,12 @@ export default function SectionSelection() {
                     ))}
                 </div>
             </div>
-            <div className="choosenMovie">
-                <div className="container">
-                    <img src={filme.posterURL} alt="cartaz-2" />
-                </div>
-                <div className="choosenMovieData">
-                    <span className="choosenMovieName">
-                        {filme.title}
-                    </span>
-                </div>
-            </div>
+
+            <Footer
+                src={movie.posterURL}
+                alt={movie.title}
+                title={movie.title}
+            />
         </main>
     );
 }
