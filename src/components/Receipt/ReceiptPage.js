@@ -34,35 +34,43 @@ export default function ReceiptPage({ confirmSend }) {
             </div>
             <div className="content">
                 <div className="movie-session">
-                    <div className="title">
-                        Filme e sessão
-                    </div>
-                    <div className="data">
-                        {movieSession.movie.title}
-                    </div>
-                    <div className="data">
-                        {movieSession.day.date} {movieSession.name}
+                    <div className="container">
+                        <div className="title">
+                            Filme e sessão
+                        </div>
+                        <div className="data">
+                            {movieSession.movie.title}
+                        </div>
+                        <div className="data">
+                            {movieSession.day.date} {movieSession.name}
+                        </div>
                     </div>
                 </div>
                 <div className="tickets">
-                    <div className="title">
-                        Ingressos
-                    </div>
-                    {confirmSend.ids.map(seat => (
-                        <div className="data">
-                            Assento {seat % 50 === 0 ? "50" : seat % 50}
+                    <div className="container">
+
+                        <div className="title">
+                            Ingressos
                         </div>
-                    ))}
+                        {confirmSend.ids.map(seat => (
+                            <div className="data">
+                                Assento {seat % 50 === 0 ? "50" : seat % 50}
+                            </div>
+                        ))}
+                    </div>
                 </div>
                 <div className="buyer">
-                    <div className="title">
-                        Comprador
-                    </div>
-                    <div className="data">
-                        Nome: {confirmSend.name}
-                    </div>
-                    <div className="data">
-                        CPF: {confirmSend.cpf}
+                    <div className="container">
+
+                        <div className="title">
+                            Comprador
+                        </div>
+                        <div className="data">
+                            Nome: {confirmSend.name}
+                        </div>
+                        <div className="data">
+                            CPF: {confirmSend.cpf}
+                        </div>
                     </div>
                 </div>
             </div>

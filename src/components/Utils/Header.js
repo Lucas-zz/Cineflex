@@ -19,6 +19,7 @@ export default function Header() {
                 :
                 <header className="header">
                     <p>CINEFLEX</p>
+                    <h1>A Driven<br />Education<br />Project</h1>
                 </header>
             }
         </>
