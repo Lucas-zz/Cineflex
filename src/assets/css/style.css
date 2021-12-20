@@ -8,7 +8,7 @@ body {
     margin: auto;
 
     text-align: center;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 400;
     color: #000;
 
@@ -23,6 +23,7 @@ body {
     justify-content: center;
     align-items: center;
 
+    /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
     font-weight: normal;
     font-size: 34px;
     line-height: 40px;
@@ -37,17 +38,21 @@ body {
     z-index: 2;
 }
 
-.header > img {
-    width: 30px;
-    height: 30px;
+.header ion-icon {
+    width: 27px;
+    height: 27px;
 
+    color: #fff;
     background-color: #e8833a;
 
-    border-radius: 50px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
     
     position: fixed;
     right: 12px;
-    top: 18px;
+    top: 20px;
     z-index: 3;
 }
 

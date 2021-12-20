@@ -14,7 +14,7 @@ export default function Header() {
                 ?
                 <header className="header">
                     <p>CINEFLEX</p>
-                    <img onClick={Navigate} src={backArrow} alt="back-arrow" />
+                    <ion-icon onClick={Navigate} className="back-arrow" name="chevron-back-sharp"></ion-icon>
                 </header>
                 :
                 <header className="header">
