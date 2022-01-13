@@ -2,6 +2,16 @@
 
 Single-Page Application made to a movie theater, using React Router for the first time!
 
+## Table of contents
+
+- [Overview](#overview)
+  - [About](#about)
+  - [Built with](#built-with)
+- [How to run](#how-to-run)
+- [Author](#author)
+
+## Overview
+
 <div align='center'>
   <img style='ustify-content: center' src='/src/assets/img/cineflex.gif' />
 </div>
@@ -21,7 +31,7 @@ This application has the following features:
   - Also, enables the user to navigate to past pages with a left arrow button located at the page's top right
   - And, on the final receipt page, it's possible to go back to the home page
 
-## Technologies
+## Built with
 
 The following tools and libs wewe used in the construction of the project: <br>
 
@@ -54,3 +64,9 @@ npm start
 npm run build
 ```
 5. Finally, access http://localhost:3000 on your favorite browser (unless it is Internet Explorer. In this case, review your life decisions)
+
+## Author
+
+- LinkedIn - [Lucas Azzolini Vieira](https://www.linkedin.com/in/azzolinilucas/)
+- Frontend Mentor - [@Lucas-zz](https://www.frontendmentor.io/profile/Lucas-zz)
+- Twitter - [@zulenno](https://twitter.com/zulenno)
