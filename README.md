@@ -1,13 +1,47 @@
 # Cineflex
 
-Projeto feito com JavaScript/React/React Router, HTML, CSS e uma API disponibilizada pela Driven Education!
+Single-Page Application made to a movie theater, using React Router for the first time!
 
-## Sobre
+<div align='center'>
+  <img style='ustify-content: center' src='/src/assets/img/cineflex.gif' />
+</div>
 
-Single-Page Application feita para um cinema, usando React Router!
+Try it out now <a href="https://lucas-zz-cineflex.vercel.app/" target="_blank">here</a>.
 
-Nessa aplicação é possível escolher um filme a partir de uma lista retirada de uma API, tendo páginas de escolha de sessão e horários, escolha de assentos com input do nome e CPF do comprador dos ingressos, além da tela final de sucesso com os dados da sessão escolhida!
+## About
 
-## Deploy
+This application has the following features:
+  - Display a catalog including a broad range of movies
+  - Lists lots of sessions to the choosen movie
+  - Show up a grid of available seats
+    - Enables the user to choose their seats and also input their name and CPF
+  - And shows the receipt with all the useful informatin about the user and movie sesson
 
-Mobile: https://lucas-zz-cineflex.vercel.app/
+## Technologies
+The following tools and libs wewe used in the construction of the project: <br>
+<p>
+  <img style='margin: 5px' src='https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E'>
+  <img style='margin: 5px' src='https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white'>
+  <img style='margin: 5px' src='https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white'>
+  <img style='margin: 5px;' src='https://img.shields.io/badge/axios%20-%2320232a.svg?&style=for-the-badge&color=informational'>
+  <img style='margin: 5px;' src="https://img.shields.io/badge/react-app%20-%2320232a.svg?&style=for-the-badge&color=60ddf9&logo=react&logoColor=%2361DAFB"/>
+  <img style='margin: 5px;' src="https://img.shields.io/badge/react_router%20-%2320232a.svg?&style=for-the-badge&logo=react&logoColor=%2361DAFB"/>
+</p>
+
+
+## How to run
+
+1. Clone this repository
+2. Install dependencies
+```bash
+npm i
+```
+5. Run the front-end with
+```bash
+npm start
+```
+6. You can optionally build the project running
+```bash
+npm run build
+```
+7. Finally, access http://localhost:3000 on your favorite browser (unless it is Internet Explorer. In this case, review your life decisions)
