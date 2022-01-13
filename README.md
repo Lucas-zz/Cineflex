@@ -6,7 +6,9 @@ Single-Page Application made to a movie theater, using React Router for the firs
   <img style='ustify-content: center' src='/src/assets/img/cineflex.gif' />
 </div>
 
-Try it out now <a href="https://lucas-zz-cineflex.vercel.app/" target="_blank">here</a>.
+<br />
+
+Try it out now <a href="https://lucas-zz-cineflex.vercel.app/" target="_blank"><strong>here</strong></a>.
 
 ## About
 
@@ -15,10 +17,14 @@ This application has the following features:
   - Lists lots of sessions to the choosen movie
   - Show up a grid of available seats
     - Enables the user to choose their seats and also input their name and CPF
-  - And shows the receipt with all the useful informatin about the user and movie sesson
+  - Shows the receipt with all the useful informatin about the user and movie sesson
+  - Also, enables the user to navigate to past pages with a left arrow button located at the page's top right
+  - And, on the final receipt page, it's possible to go back to the home page
 
 ## Technologies
+
 The following tools and libs wewe used in the construction of the project: <br>
+
 <p>
   <img style='margin: 5px' src='https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E'>
   <img style='margin: 5px' src='https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white'>
@@ -32,16 +38,19 @@ The following tools and libs wewe used in the construction of the project: <br>
 ## How to run
 
 1. Clone this repository
+
 2. Install dependencies
 ```bash
 npm i
 ```
-5. Run the front-end with
+
+3. Run the front-end with
 ```bash
 npm start
 ```
-6. You can optionally build the project running
+
+4. You can optionally build the project running
 ```bash
 npm run build
 ```
-7. Finally, access http://localhost:3000 on your favorite browser (unless it is Internet Explorer. In this case, review your life decisions)
+5. Finally, access http://localhost:3000 on your favorite browser (unless it is Internet Explorer. In this case, review your life decisions)
