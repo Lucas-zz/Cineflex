@@ -20,7 +20,7 @@ Single-Page Application made to a movie theater, using React Router for the firs
 
 Try it out now <a href="https://lucas-zz-cineflex.vercel.app/" target="_blank"><strong>here</strong></a>.
 
-## About
+### About
 
 This application has the following features:
   - Display a catalog including a broad range of movies
@@ -31,7 +31,7 @@ This application has the following features:
   - Also, enables the user to navigate to past pages with a left arrow button located at the page's top right
   - And, on the final receipt page, it's possible to go back to the home page
 
-## Built with
+### Built with
 
 The following tools and libs wewe used in the construction of the project: <br>
 
