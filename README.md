@@ -33,7 +33,7 @@ This application has the following features:
 
 ### Built with
 
-The following tools and libs wewe used in the construction of the project: <br>
+The following tools and libs were used in the construction of the project: <br>
 
 <p>
   <img style='margin: 5px' src='https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E'>
