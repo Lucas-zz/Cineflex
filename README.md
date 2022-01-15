@@ -1,6 +1,6 @@
 # Cineflex
 
-Single-Page Application made to a movie theater, using React Router for the first time!
+Single-Page Application made to a movie theater, using ```React Router``` for the first time!
 
 ## Table of contents
 
