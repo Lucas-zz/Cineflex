@@ -6,7 +6,7 @@ Single-Page Application made to a movie theater, using ```React Router``` for th
 
 - [Overview](#overview)
   - [About](#about)
-  - [Built with](#built-with)
+- [Built with](#built-with)
 - [How to run](#how-to-run)
 - [Author](#author)
 
@@ -31,7 +31,7 @@ This application has the following features:
   - Also, enables the user to navigate to past pages with a left arrow button located at the page's top right
   - And, on the final receipt page, it's possible to go back to the home page
 
-### Built with
+## Built with
 
 The following tools and libs were used in the construction of the project: <br>
 
@@ -60,11 +60,12 @@ npm i
 npm start
 ```
 
-4. You can optionally build the project running
+<!-- 4. You can optionally build the project running
 ```bash
 npm run build
-```
-5. Finally, access http://localhost:3000 on your favorite browser (unless it is Internet Explorer. In this case, review your life decisions)
+``` -->
+
+4. Finally, access http://localhost:3000 (the port ':3000' is subjected to changes) on your favorite browser (unless it is Internet Explorer. In this case, review your life decisions)
 
 ## Author
 
